@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         button3.layer.borderColor = UIColor.lightGray.cgColor
         
         askQuestion()
-        
+        //test
         // Do any additional setup after loading the view.
     }
     
