@@ -16,38 +16,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJu-Ck-1CR">
+                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZH-82-mbB">
                                 <rect key="frame" x="84.666666666666686" y="100" width="224" height="114"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <buttonConfiguration key="configuration" style="plain" image="germany"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9U9-mV-sRz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lof-lV-lD8">
                                 <rect key="frame" x="84.666666666666686" y="244" width="224" height="114"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <buttonConfiguration key="configuration" style="plain" image="germany"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Cc-pm-geb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAO-n3-5Th">
                                 <rect key="frame" x="84.666666666666686" y="388" width="224" height="114"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                <buttonConfiguration key="configuration" style="plain" image="germany"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5Cc-pm-geb" firstAttribute="top" secondItem="9U9-mV-sRz" secondAttribute="bottom" constant="30" id="68H-eO-Rcd"/>
-                            <constraint firstItem="BJu-Ck-1CR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Gt1-Ke-887"/>
-                            <constraint firstItem="9U9-mV-sRz" firstAttribute="top" secondItem="BJu-Ck-1CR" secondAttribute="bottom" constant="30" id="Pbw-if-Nuo"/>
-                            <constraint firstItem="5Cc-pm-geb" firstAttribute="centerX" secondItem="9U9-mV-sRz" secondAttribute="centerX" id="gbH-tE-pyT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="BJu-Ck-1CR" secondAttribute="top" constant="3" id="jND-6r-Ksq"/>
-                            <constraint firstItem="9U9-mV-sRz" firstAttribute="centerX" secondItem="BJu-Ck-1CR" secondAttribute="centerX" id="qVI-Ty-ck3"/>
+                            <constraint firstItem="lof-lV-lD8" firstAttribute="top" secondItem="hZH-82-mbB" secondAttribute="bottom" constant="30" id="36o-bB-kyF"/>
+                            <constraint firstItem="UAO-n3-5Th" firstAttribute="top" secondItem="lof-lV-lD8" secondAttribute="bottom" constant="30" id="RR8-sa-I3u"/>
+                            <constraint firstItem="lof-lV-lD8" firstAttribute="centerX" secondItem="hZH-82-mbB" secondAttribute="centerX" id="eXn-Ie-lfL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="hZH-82-mbB" secondAttribute="top" constant="3" id="r9h-1v-JOv"/>
+                            <constraint firstItem="UAO-n3-5Th" firstAttribute="centerX" secondItem="lof-lV-lD8" secondAttribute="centerX" id="r9t-Gi-YQV"/>
+                            <constraint firstItem="hZH-82-mbB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sev-E9-RoK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hK9-l7-r16"/>
                     <connections>
-                        <outlet property="button1" destination="BJu-Ck-1CR" id="YLa-Ik-80F"/>
-                        <outlet property="button2" destination="9U9-mV-sRz" id="H0c-Wi-xvK"/>
-                        <outlet property="button3" destination="5Cc-pm-geb" id="5vK-QR-0wL"/>
+                        <outlet property="button1" destination="hZH-82-mbB" id="eDV-te-chH"/>
+                        <outlet property="button2" destination="lof-lV-lD8" id="7wV-gz-sxl"/>
+                        <outlet property="button3" destination="UAO-n3-5Th" id="h9e-Ar-LM6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -74,7 +74,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="us" width="200" height="100"/>
+        <image name="germany" width="200" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
