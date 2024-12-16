@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var questionAsked = 0
+    let numberOfQuestions = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,7 @@ class ViewController: UIViewController {
         button2.layer.borderColor = UIColor.lightGray.cgColor
         button3.layer.borderColor = UIColor.lightGray.cgColor
         
+        
         askQuestion()
         //test
         // Do any additional setup after loading the view.
@@ -44,23 +47,37 @@ class ViewController: UIViewController {
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
         correctAnswer = Int.random(in: 0...2)
-        title = countries[correctAnswer].uppercased()
+        title = "\(countries[correctAnswer].uppercased()) Score: \(score)"
+        
     }
     @IBAction func buttonTapped(_ sender: UIButton) {
         
         var titleText: String
+        var messageText: String
         
         if sender.tag == correctAnswer {
             titleText = "Correct!"
             score += 1
+            messageText = "Your score is: \(score)"
+            
         } else {
             titleText = "Wrong!"
-            score -= 1
+            messageText = "You've chosen \(countries[sender.tag].uppercased()), your score is: \(score)"
+            
         }
         
-        let ac = UIAlertController(title: titleText, message: "Your score is: \(score)", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
-        present(ac, animated: true)
+        if questionAsked < numberOfQuestions-1 {
+            let ac = UIAlertController(title: titleText, message: messageText, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+            present(ac, animated: true)
+            questionAsked += 1
+        } else {
+            let ac = UIAlertController(title: titleText, message: "Game finished, Your final score is: \(score)", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "New Game", style: .default, handler: askQuestion))
+            present(ac, animated: true)
+            questionAsked = 0
+            score = 0
+        }
     
     }
     
