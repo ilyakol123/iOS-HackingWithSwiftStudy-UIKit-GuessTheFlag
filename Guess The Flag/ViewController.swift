@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(scoreCheck))
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         
         button1.layer.borderWidth = 1
@@ -79,6 +80,12 @@ class ViewController: UIViewController {
             score = 0
         }
     
+    }
+    @objc func scoreCheck() {
+        
+        let ac = UIAlertController(title: "Current Score", message: "\(score)", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Continue the game", style: .default, handler: .none))
+        present(ac, animated: true)
     }
     
 
